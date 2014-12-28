@@ -2,18 +2,21 @@
 
 : override content -> {
 
-
 <ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="/index">Index</a></li>
+  <li role="presentation"><a href="#">Home</a></li>
   <li role="presentation" ><a href="/alfa">アルファルファモザイク</a></li>
   <li role="presentation" ><a href="/2chcp">2chコピー</a></li>
   <li role="presentation" ><a href="/newtou">ニュー投</a></li>
   <li role="presentation" ><a href="/2chmatomeblog">2chまとめブログ</a></li>
-  <li role="presentation" ><a href="/watch2ch">Watch＠2チャンネル</a></li>
-  <li role="presentation"><a href="/matometanews">まとめたニュース</a></li>
-  <li role="presentation" ><a href="/yutori">(´A｀)＜咳をしてもゆとり</a></li>
+  <li role="presentation" class="active"><a href="/watch2ch">Watch2ch!</a></li>
 </ul>
 
-
+<br/>
+ 
+  : for $feeds -> $feed{
+     <a href="<:$feed.link:>"><:$feed.title:><br/></a>   
+     <:$feed.subject:><br/>
+     <:$feed.date:><br/>
+  :}
 
 :}

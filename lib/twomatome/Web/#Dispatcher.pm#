@@ -20,13 +20,12 @@ get '/newtou' => "Root#newtou";
 get '/2chmatomeblog' => "Root#twomatomeblog";
 
 get '/joshiki' => "Root#joshiki";
-
 get '/watch2ch' => "Root#watch2ch";
 
 get '/matometanews' => "Root#matometanews";
 
 get '/yutori' => "Root#yutori";
 
-get 'itai' => "Root#itai";
+
 
 1;
