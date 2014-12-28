@@ -1,0 +1,19 @@
+: cascade "include/layout.tx"
+
+: override content -> {
+
+<ul class="nav nav-tabs">
+  <li role="presentation"><a href="#">Home</a></li>
+  <li role="presentation" ><a href="/alfa">アルファルファモザイク</a></li>
+  <li role="presentation" class="active"><a href="/2chcp">2chコピー</a></li>
+</ul>
+
+<br/>
+ 
+  : for $feeds -> $feed{
+     <a href="<:$feed.link:>"><:$feed.title:><br/></a>
+     <:$feed.subject:><br/>
+     <:$feed.date:><br/>
+  :}
+
+:}
