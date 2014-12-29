@@ -10,7 +10,7 @@ base_row_class 'twomatome::DB::Row';
 table {
    name 'article';
    pk 'id';
-   columns qw(id title subject rank url date);
+   columns qw(id title subject rank url date threadid);
 };
 
 1;

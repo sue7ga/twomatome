@@ -32,6 +32,7 @@ sub twomatomeblog{
  my($class,$c) = @_;
  my $matome = new twomatome::Model::Matome(url => 'http://news020.blog13.fc2.com/?xml');
  my $feeds = $matome->response();
+ #$c->db->insert_matome($feeds,4);
  return $c->render('twomatomeblog.tx',{feeds => $feeds});
 }
 
@@ -70,5 +71,7 @@ sub itai{
  my $feeds = $matome->response();
  return $c->render('itai.tx',{feeds => $feeds});
 }
+
+
 
 1;

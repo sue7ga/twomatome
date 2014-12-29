@@ -27,6 +27,6 @@ get '/matometanews' => "Root#matometanews";
 
 get '/yutori' => "Root#yutori";
 
-get 'itai' => "Root#itai";
+
 
 1;

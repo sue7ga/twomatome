@@ -1,4 +1,9 @@
-CREATE TABLE IF NOT EXISTS member (
-    id           INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    name         VARCHAR(255)
+CREATE TABLE IF NOT EXISTS article(
+   id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   title VARCHAR(255),
+   subject VARCHAR(255),
+   rank INTEGER,
+   url VARCHAR(255),
+   date VARCHAR(255),
+   threadid INTEGER
 );
