@@ -1,3 +1,4 @@
+
 : cascade "include/layout.tx"
 
 : override content -> {
@@ -18,8 +19,13 @@
 
  
   : for $feeds -> $feed{
-     <a href="<:$feed.link:>"><:$feed.title:><br/></a>   
-     <:$feed.subject:><br/>
+     <a href="/count?threadid=<:$feed.threadid:>&articleid=<:$feed.id:>"><:$feed.title:><br/></a>  
+   :if defined $feed.rank{
+    (<:$feed.rank:>)
+   :}else{
+    (0)
+   :}
+    <:$feed.subject:><br/>
      <:$feed.date:><br/>
   :}
 

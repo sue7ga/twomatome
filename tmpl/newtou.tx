@@ -16,12 +16,17 @@
 
 <br/>
 
-
-<br/>
- 
   : for $feeds -> $feed{
-     <a href="<:$feed.link:>"><:$feed.title:><br/></a>   
+     <a href="/count?threadid=<:$feed.threadid:>&articleid=<:$feed.id:>"><:$feed.title:><br/></a>  
+   :if defined $feed.rank{
+    (<:$feed.rank:>)
+   :}else{
+    (0)
+   :}
+    <:$feed.subject:><br/>
      <:$feed.date:><br/>
   :}
+
+ 
 
 :}
